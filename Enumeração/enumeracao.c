@@ -3,10 +3,10 @@
 
 int getMaxSequence(int* vetor, int n){
   // maximo e contador começam como 1 pois o pior caso é a sequência ser de só 1 elemento
-  int maximo = 1, contador = 1;
+  int maximo = 1, contador = 1; // O(1)
 
-  for (int i = 1; i < n; i++){
-    if(vetor[i-1] < vetor[i]){
+  for (int i = 1; i < n; i++){ //O(n)
+    if(vetor[i-1] < vetor[i]){ 
       contador++;
       if (contador > maximo){ maximo = contador; }
     
@@ -16,6 +16,7 @@ int getMaxSequence(int* vetor, int n){
   }
   return maximo;
 }
+// Função executa em O(n)
 
 
 int main(void){
